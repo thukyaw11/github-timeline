@@ -1,0 +1,28 @@
+.infopanel__root {
+    height: 60px;
+    position: sticky;
+    top: 0;
+    font-size: 1.125rem;
+    color: var(--main-text-color);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    margin-bottom: 30px;
+    animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.infopanel__avatar {
+    height: 2.25em;
+    width: 2.25em;
+    border-radius: 100%;
+    margin-right: 12px;
+    font-size: 0.8125rem;
+}
+
+.infopanel__username {
+    font-weight: 500;
+    text-decoration: none;
+}

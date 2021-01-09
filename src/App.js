@@ -3,6 +3,7 @@ import { Header, Search, TimeLine  } from './components'
 import { fetchData } from './api/index';
 import { useState } from 'react';
 import Container from '@material-ui/core/Container';
+import { InfoPanel } from './components/general';
 
 
 function App() {
@@ -56,8 +57,10 @@ function App() {
   return (
   <Container maxWidth="sm">
       <Header />
-      <TimeLine data={data} loadMore={loadMore}/>
-      <Search isLoading={isLoading} getData={getData}/>
+      <InfoPanel data={data.repos}/>
+       <Search isLoading={isLoading} getData={getData}/>
+      <TimeLine data={data} loadMore={loadMore} hasError={hasError} notFound={notFound}/>
+     
 
     </Container>
   );

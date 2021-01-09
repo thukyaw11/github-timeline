@@ -1,0 +1,126 @@
+.timelineitem__root {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+    transition: background 0.25s;
+    animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.timelineitem__root:hover {
+    background: rgba(0, 0, 50, 0.03);
+}
+
+.timelineitem__separator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timelineitem__dot {
+    min-width: 35px;
+    min-height: 35px;
+    background: var(--main-blue);
+    border-radius: 100%;
+    margin-bottom: 10px;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.timelineitem__dot-icon {
+    font-size: 0.8rem;
+}
+
+.timelineitem__label {
+    position: absolute;
+    right: 60px;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #93989e;
+}
+
+.timelineitem__label:not(:empty)::after {
+    content: '\2022';
+    color: inherit;
+    left: 10px;
+    position: relative;
+}
+
+.timelineitem__dot i {
+    color: white;
+}
+
+.timelineitem__connector {
+    width: 3px;
+    border-radius: 3px;
+    height: 100%;
+    background: #d2d9df;
+}
+
+.timelineitem__root:last-child>.timelineitem__separator .timelineitem__connector {
+    display: none;
+}
+
+.timelineitem__content {
+    margin: 3px 0 0 30px;
+}
+
+.timelineitem__content>* {
+    font-weight: 500;
+}
+
+.timelineitem__title {
+    font-size: 1.15rem;
+    color: var(--main-text-color);
+    text-decoration: none;
+    transition: color 0.35s;
+}
+
+.timelineitem__title:hover {
+    color: var(--main-blue);
+    text-decoration: underline;
+}
+
+.timelineitem__description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #434a50;
+    margin: 10px 0 20px 0;
+    background: white;
+    padding: 15px;
+    border-radius: 3px;
+    max-width: 45ch;
+    box-shadow:
+        0 0px 1px rgba(0, 0, 0, 0.025),
+        0 1px 2px rgba(0, 0, 0, 0.025),
+        0 2px 4px rgba(0, 0, 0, 0.025),
+        0 8px 8px rgba(0, 0, 0, 0.025),
+        0 8px 8px rgba(0, 0, 0, 0.025);
+}
+
+.timelineitem__description:empty {
+    display: none;
+}
+
+.timelineitem__date {
+    font-size: 0.9rem;
+    color: #7e8792;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.timelineitem__root:last-child .timelineitem__date {
+    margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+
+    .timelineitem__label,
+    .timelineitem__label::after {
+        display: none;
+    }
+}

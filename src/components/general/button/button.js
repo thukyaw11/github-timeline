@@ -1,5 +1,4 @@
 import React from 'react';
-import { Loading } from '../../states';
 import './button.css';
 import {Button as MaterailBtn } from '@material-ui/core'
 

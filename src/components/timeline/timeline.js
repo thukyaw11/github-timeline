@@ -1,6 +1,6 @@
 import React from 'react';
 import './timeline.css'
-import {Button, TimeLineCard,} from '../../components'
+import {Button, TimeLineCard} from '../../components'
 import { Grid,Box } from '@material-ui/core';
 import { Welcome, NotFound, Error } from '../states';
 
